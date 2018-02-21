@@ -1,0 +1,13 @@
+RewriteOptions inherit
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /pr/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /pr/index.php [L]
+</IfModule>
+
+#Quick mod of WordPress's URL rewrite configuration,
+#Used for detecting the string added at the end of the URL. 
+#Update the path after RewriteBase to match path on your site.
