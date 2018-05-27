@@ -1,6 +1,6 @@
 <?php
 $redirect_base = '/pr/';
-$slogan = urldecode(str_replace($redirect_base, '', $_SERVER['REQUEST_URI']));
+$slogan = strip_tags(urldecode(str_replace($redirect_base, '', $_SERVER['REQUEST_URI'])));
 ?>
 
 <!DOCTYPE html >
@@ -100,5 +100,4 @@ text-shadow: 1px -1px 0px #b1a096, 2px -2px 0px #ac9f96, 3px -3px 0px #ae9d95, 4
 
 <div class="container"><img class="big" alt="<? echo $slogan ?>" src="//i.imgur.com/8A8CGJp.png"><img class="small" alt="<? echo $slogan ?>" src="//i.imgur.com/LK8smIQ.png"><div class="slogan-outer"><div class="slogan-inner" id="slogan"><? echo $slogan ?></div></div>
 </body>
-</html>
 </html>
